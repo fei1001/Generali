@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Register xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/crm/2011/tools/pluginregistration">
+  <Solutions>
+    <Solution Assembly="Generali.Plugins.dll" Id="00000000-0000-0000-0000-000000000000" IsolationMode="Sandbox" SourceType="Database" />
+    <Solution Assembly="Generali.Workflows.dll" Id="b1e6969d-5e52-44d2-ac12-c930e2b5cc34" IsolationMode="Sandbox" SourceType="Database">
+      <WorkflowTypes>
+        <clear />
+        <WorkflowType FriendlyName="GetCurrentUser" Name="GetCurrentUser" Description="Get Current User" WorkflowActivityGroupName="Ergo" WorkflowActivityProjectName="Workflows" Id="00000000-0000-0000-0000-000000000000" TypeName="Generali.Workflows.GetCurrentUser" />
+        <WorkflowType FriendlyName="Versions_Clone" Name="Versions-Cloning" Description="Clone Versions and all child records" WorkflowActivityGroupName="Ergo" WorkflowActivityProjectName="Workflows" Id="00000000-0000-0000-0000-000000000000" TypeName="Generali.Workflows.Versions-Cloning" />
+      </WorkflowTypes>
+    </Solution>
+  </Solutions>
+  <XamlWorkflows>
+    <XamlWorkflowSolution Assembly="Generali.Workflows.dll" />
+  </XamlWorkflows>
+</Register>
